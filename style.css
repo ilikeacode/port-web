@@ -1,10 +1,30 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  overflow-y:hidden;
+ background: wheat;
+}
+
+::-webkit-scrollbar{
+  width: 2em;
+}
+
+::-webkit-scrollbar-track {
+background: wheat;
+border: 100vw;
+margin-block:.5m;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(216, 195, 169);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(109, 152, 43);
+  
 }
 
 div.scroll-container {
@@ -33,7 +53,6 @@ img{
   background-color: wheat;
 }
 
-
 .navbar a {
   float: left;
   display: block;
@@ -43,35 +62,15 @@ img{
   text-decoration: none;
 }
 
-
 .navbar a.right {
   float: right;
 }
 
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
+footer {
   padding: 20px;
-}
-
-
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-
-
-
-.footer {
-  padding: 10px;
   text-align: center;
   background: wheat;
 }
-
 
 @media screen and (max-width: 700px) {
   .row {   
@@ -86,6 +85,13 @@ img{
   align-items: center;
   justify-content: center;
  }
+
+ body {
+  overflow-y:scroll;
+}
+::-webkit-scrollbar{
+ scrollbar-width: thin;
+}
 }
 @media screen and (max-width: 400px) {
   .navbar a {
